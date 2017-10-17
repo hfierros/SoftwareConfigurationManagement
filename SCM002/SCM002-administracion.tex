@@ -1,0 +1,77 @@
+%% LaTeX Beamer presentation template (requires beamer package)
+%% see http://bitbucket.org/rivanvx/beamer/wiki/Home
+%% idea contributed by H. Turgut Uyar
+%% template based on a template by Till Tantau
+%% this template is still evolving - it might differ in future releases!
+
+\documentclass{beamer}
+
+
+\mode<presentation>
+{
+\usetheme{Marburg}
+\usecolortheme{crane}
+\setbeamercovered{transparent}
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+% font definitions, try \usepackage{ae} instead of the following
+% three lines if you don't like this look
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{graphicx}
+
+\usepackage[T1]{fontenc}
+
+
+\title{Administraci\'on de la configuraci\'on de Software}
+
+\subtitle{Segunda sesi\'on: Administraci\'on}
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{univa.png}
+\logo{\pgfuseimage{university-logo}}
+
+\titlegraphic{\includegraphics[height=1.5cm]{univa.png}}
+
+
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+%\author{F.~Author\inst{1} \and S.~Another\inst{2}}
+\author{H\'ector Jos\'e Fierros L\'opez }
+
+
+\date{Mayo 2017}
+
+
+% This is only inserted into the PDF information catalog. Can be left
+% out.
+\subject{Talks}
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex
+% resp., then you can add a logo as follows:
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\frametitle{?`Donde estamos?}
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+\begin{document}
+
+\input{SCM002-Body}
+
+\end{document}

@@ -1,0 +1,227 @@
+
+\theoremstyle{definition}
+\newtheorem{definicion}{Definici\'on}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{A cubrir hoy\ldots}
+\tableofcontents
+% You might wish to add the option [pausesections]
+\end{frame}
+
+\section{Selecci\'on de art\'iculos de configuraci\'on}
+\begin{frame}
+	\frametitle{Art\'iculos y conglomerados}
+	
+La identificaci\'on de art\'iculos es la selecci\'on, creaci\'on y especificaci\'on de: 
+	\begin{itemize}
+		\item Productos entregados al cliente
+		\item Productos de trabajo internos determinados
+		\item Productos adquiridos
+		\item Herramientas, y otros activos del ambiente de trabajo del proyecto
+		\item Otros art\'iculos usados en crear y describir estos productos de trabajo
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Seleccionando art\'iculos de configuraci\'on}
+	La selecci\'on de art\'iculos bajo el control de la configuraci\'on 
+	ocurre al principio de un proyecto, cuando se ha acordado cuales ser\'an
+	los entregables. 
+
+	Continua a lo largo del proyecto. 
+
+	Es similar a la identificaci\'on de los objeto	s en durante un an\'alisis orientado a objetos. 
+
+	No es posible usar algoritmos. 
+\end{frame}
+
+\begin{frame}
+\frametitle{Algunos criterios para la selecci\'on de art\'iculos}
+?`Que incluir en la configuraci\'on de software?
+	\begin{itemize}
+		\item Productos de trabajo que ser\'an usados por uno o m\'as grupos. 
+		\item Productos de trabajo que cambiar\'an en el tiempo, a causa de errores o 
+			cambios de requerimientos
+		\item Productos de trabajo con dependencias, de tal manera que un cambio en uno 
+			force un cambio en el otro
+		\item Productos de trabajo que sean cr\'iticos para el proyecto. 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Ejemplos de art\'iculos de configuraci\'on}
+	\begin{itemize}
+		\item Descripciones de procesos
+		\item Requerimientos
+		\item Dise\~no
+		\item C\'odigo fuente
+		\item Planes de pruebas y procedimientos
+		\item Resultados de pruebas
+		\item Descripcion de interfaces.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Un par de ejemplos}
+	Un desarrollo de una aplicaci\'on de WEB en Java.
+
+	Un desarrollo de un device driver para Linux en C. 
+\end{frame}
+\begin{frame}
+	En una aplicaci\'on de WEB 
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item Documento de an\'alisis de requerimientos
+				\item Diagramas de Dise\~no de objetos
+				\item Manual de usuario
+				\item Archivos JAR de objetos no desarrollados por el equipo
+				\item Archivos WAR
+				\item Bases de datos
+				\item C\'odigo fuente
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item Archivos ANT
+				\item Servidor de aplicaciones				\item JVM
+				\item Certificados de seguridad
+				\item Casos de uso
+				\item Ayuda en linea
+				\item Documentos de dise\~no de sistemas.
+				\item \ldots
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Despues de identificar ?`Que?}
+Una vez completada la identificaci\'on de art\'iculos de configuraci\'on:
+	\begin{itemize}
+		\item Se le asigna un identificador \'unico. 
+		\item Se especifican las caracter\'isticas de cada art\'iculo de configuraci\'on. 
+		\item Especificar cuando se incluye el art\'iculo de configuraci\'on en el control de cambios
+		\item Identificar al due\~no de cada art\'iculo de configuraci\'on
+		\item Identificar relaciones entre los art\'iculos. 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Establesciendo un sistema de administraci\'on de configuraci\'on}
+	\begin{itemize}
+		\item Establescer un mecanismo para manejar niveles m\'ultiples de control
+		\item Establescer un sistema de control para asegurar accesos autorizados al CM
+		\item Almacenar los art\'iculos de configuraci\'on en el sistema
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Baseline}
+ 	Una parte del equipo forma el Change Control Board. Ellos determinar\'an las versiones iniciales de 
+	los art\'iculos de configuraci\'on necesarios para crear una linea base inicial. 
+
+	La linea base inicial (baseline) es la colecci\'on de art\'iculos de configuraci\'on acordada por el CCB
+	a partir de la cual el producto empezar\'a a evolucionar. 
+
+	En un acuerdo general el baseline es liberado por el CCB
+\end{frame}
+\
+\section{Administraci\'on de promociones}
+\begin{frame}
+	\frametitle{Promociones}
+	\begin{itemize}
+		\item A fin de cambiar un art\'iculo de configuraci\'on, el responsable primero usa una promoci\'on. 
+		\item Una promoci\'on es la manera de hacer un cambio a un art\'iculo de configuraci\'on y hacerlo disponible de manera interna.
+		\item Los cambios a un art\'iculo de configuraci\'on pueden estar sujetos a otros procesos (vgr. revisiones, pruebas unitarias, juntas de aprobaci\'on)
+		\item Una vez que un art\'iculo de configuraci\'on es cambiado, su versi\'on cambia. Los cambios ser\'an permanentes. El art\'iculo de configuraci\'on tendr\'a una historia.  
+	\end{itemize}
+\end{frame}
+
+\section{Administraci\'on de liberaciones}
+\begin{frame}
+	\frametitle{Liberaciones}
+	\begin{itemize}
+		\item Las liberaciones son creadas, de acuerdo a desiciones administrativas. 
+		\item Se manejan de manera similar a una promoci\'on, pero requieren de una mayor coordinaci\'on. 
+		\item Se sincronizan los diferentes aspectos del producto, de manera que las diferentes dependencias se satisfagan.
+		\item Un equipo de control de calidad o validaci\'on asegura que la colecci\'on de art\'iculos del conglomerado sea consistente. 
+	\end{itemize}
+\end{frame}
+
+\section{Administraci\'on de ramas}
+\begin{frame}
+	\frametitle{?'Por que hacer ramas?}
+	Las ramificaciones son creadas para poder aislar \'areas de trabajo entre desarrolladores o equipos de trabajo. 
+	\begin{enumerate}
+		\item Los equipos de trabajo acuerdan durante cuanto tiempo se har\'a la ramificaci\'on. 
+		\item Los equipos de trabajo acuerdan que interfaces cambiar y cuales conserver
+		\item Se realiza el trabajo independiente. 
+		\item Se une el trabajo entre ramas. 
+	\end{enumerate}
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Uniendo ramas de trabajo}
+	\begin{itemize}
+		\item Identificar areas comunes.
+		\item Hacer uniones frecuentemente. 
+		\item Comunicar conflictos posbibles. 
+		\item Minimizar cambios en la rama principal. 
+		\item Minimizar el n\'umero de ramas. 
+	\end{itemize}
+\end{frame}
+
+\section{Administraci\'on de variantes}
+\begin{frame}
+	\frametitle{Un solo producto, muchas variaciones}
+Una variante, es c\'odigo coexistente en diferentes variacion que el principal. 
+	\begin{itemize}
+		\item Diferentes \alert{sabores} de un mismo producto (simple, profesional, de lujo)
+		\item Diferentes plataformas para un producto (android, iOS, Windows, Linux, MacOSx)
+		\item Diferentes clientes, con una configuraci\'on especial. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Como manejar las variaciones}
+	\begin{description}
+		\item [Equipos de trabajo redundantes] Los requerimientos son entregados a un equipos de trabajos redundantes. 
+			Estos trabajan de manera aislada para entregar los requerimientos.
+		\item [Un proyecto \'unico] El c\'odigo com\'un es compartido como m\'odulos de conglomerado de configuraci\'on. 
+			Equipos de trabajo se comprometen a respetar interfaces, y los cambios entre sistemas tienden a ser
+			con bajo acoplamiento. El c\'odigo com\'un es frecuentemente llamado el n\'ucleo. 
+			
+	\end{description}
+\end{frame}
+\begin{frame}
+	\frametitle{Problemas de la variaciones}
+	\begin{description}
+		\item [Un solo proveedor, m\'ultiples clientes] Los requerimientos entre los diferentes clientes pueden ir 
+			difiriendo e incluso ser contradictorios. 
+		\item [Tardanzas en el cumplimiento de requerimientos] La validaci\'on tiene que contemplar todos los 
+			posibles escenarios. 
+		\item [Inconsistencias entre plataformas] Las diferentes plataformas pueden causar limitaciones en 
+			los posibles sistemas. 
+	\end{description}
+\end{frame}	
+\section{Administraci\'on de cambios}
+\begin{frame}
+	\frametitle{Justificando los cambios}
+	Es necesario documentar la raz\'on de los cambios. En teor\'ia, ning\'un art\'iculo de configuraci\'on debiera ser 
+	cambiado sin una razon. 
+	La administraci\'on de cambios es el control de estos cambios, documentando su raz\'on. 
+        En general se sujeta a estos pasos: 
+	\begin{enumerate}
+		\item El cambio es requerido (se identifica quien lo solicita, la raz\'on (defecto, mejora)
+		\item El cambio es analizado, por un consejo, o el desarrollo de proyecto.  
+		\item El cambio es aprobado o rechazado.
+		\item En caso de ser aprobado, se le da una prioridad se le asigna un due\~no, y es implementado. 
+		\item El cambio es auditado. 
+	\end{enumerate}
+\end{frame}
+
+\section{Sumario}
+\begin{frame}
+\end{frame}
