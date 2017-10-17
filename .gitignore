@@ -6,6 +6,10 @@
 *.snm
 *.toc
 *.out
+# These extensions are created by Visual Code when handling latex documents. 
+*.fls
+*.fdb_latexmk
+*.syngex.gz
 
 # Vim temporary files. 
 *.swp
