@@ -1,0 +1,343 @@
+
+
+\title{Administraci\'on de la configuraci\'on de Software}
+
+\subtitle{Primera sesi\'on: Conceptos b\'asicos}
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{univa.png}
+\logo{\pgfuseimage{university-logo}}
+
+\titlegraphic{\includegraphics[height=1.5cm]{univa.png}}
+
+
+\author{H\'ector Jos\'e Fierros L\'opez }
+
+
+\date{Mayo 2017}
+
+\subject{Talks}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\frametitle{?`Donde estamos?}
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+
+
+\begin{document}
+\theoremstyle{definition}
+\newtheorem{definicion}{Definici\'on}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{A cubrir hoy\ldots}
+\tableofcontents
+\end{frame}
+
+
+\section{Introducci\'on}
+
+\subsection[Sobre la clase]{Sobre la clase}
+
+\begin{frame}
+\frametitle{Administraci\'on de la configuraci\'on de software}
+\framesubtitle{Objectivos.}
+
+\begin{itemize}
+  \item Conocer los conceptos de administraci\'on de configurac\'on de software.
+  \item Conocer herramientas para la adminitraci\'on de configuraci\'on de
+  software.
+  \item Dise\~nar un proceso de administraci\'on de configuraci\'on de software 
+  que responda a problem\'aticas espec\'ificas y sea susceptible de obtener
+  determinada certificaci\'on. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Administraci\'on de la configuraci\'on de software}
+\framesubtitle{Temas}
+
+\begin{itemize}
+  \item Administraci\'on de la configuraci\'on. 
+  \item Proceso de administraci\'on de la configuraci\'on.
+  \item Herramientas de la administraci\'on de la configuraci\'on
+  \item Estandares y certificaci\'on de proceso de la administraci\'on.
+\end{itemize}
+
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Administraci\'on de la configuraci\'on de software}
+\framesubtitle{Calificaciones}
+\begin{tabular}{|p{8cm} |c|}
+\hline
+Concepto & Peso \\
+\hline
+Reportes de lectura e investigaci\'on & 20\% \\
+Reportes de an\'alisis y ejercicios en clase & 20\% \\
+Reportes de pr\'acticas &  10\% \\
+Elaboraci\'on de un plan de Administrac\'on de Configuraci\'on de Software &
+50\% \\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Administraci\'on de la configuraci\'on de software}
+\framesubtitle{Bibliograf\'ia}
+\begin{itemize}
+  \item Bruegge-Dutoit, Object Oriented Software Engineering (Chapter 13)
+  \item IEEE Standard for Software Configuration Management Plans, IEEE Standards 
+Board
+  \item IEEE Guide to Software Configuration Management, IEEE Standards Board 
+  \item P\'aginas de web de las herramientas: git, mercurial, cvs, rcs, etc. 
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+\frametitle{Algunas reglas b\'asicas}
+\begin{itemize}
+  \item Celulares en silencio o vibrar
+  \item Paso de lista al final de la clase. 
+  \item No redes sociales. 
+\end{itemize}
+\end{frame}
+\subsection{Acerca del maestro}
+\begin{frame}
+\frametitle{Sobre el maestro}
+H\'ector Fierros, MC en Computer Science por UHCL
+
+Desarrollador de SW desde 1991. 
+
+Trabajando actualmente en Toshiba, desarrollando OS 4690
+\end{frame}
+
+\section{Conceptos b\'asicos de Administraci\'on de configuraci\'on de software}
+\begin{frame}
+\begin{exampleblock}{}
+  {\large ``Cambia lo superficial\ldots cambia tambien lo profundo\ldots''}
+  \vskip5mm
+  \hspace*\fill{\small--- Todo cambia, Julio Numhauser}
+\end{exampleblock}
+\end{frame}
+\subsection{?`Que?}
+\begin{frame}
+\frametitle{?`Que es la Administraci\'on de configuraci\'on de software?}
+
+\begin{definicion}
+La \alert{Administraci\'on de configuraci\'on de software} (SCM por sus siglas
+en ingl\'es) es el proceso dedicado a la controlar los cambios que un producto
+de trabajo puede tener. 
+\end{definicion}
+
+\end{frame}
+\subsection{?`Por Que?}
+\begin{frame}
+\frametitle{?`Por que es necesario el SCM?}
+\begin{center}
+\includegraphics[scale=0.3]{MalDiscoDuro.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{?`Por que es necesario el SCM?}
+\begin{center}
+\includegraphics[scale=0.3]{CambiosAProduccion.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{?`Por que es necesario el SCM?}
+\begin{center}
+\includegraphics[scale=0.3]{BorraCambiosDeOtros.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{?`Por que es necesario el SCM?}
+\begin{center}
+\includegraphics[scale=0.3]{NewCompilerVersion.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{?`Por que es necesario el SCM?}
+\begin{itemize}
+  \item Manejo simultaneo de varias versiones de un producto de software
+  tiempo.
+  \begin{itemize}
+    \item Producci\'on y desarrollo
+    \item M\'ultiples versiones soportadas.
+    \item M\'ultiples sistemas y ambientes soportados. 
+    \item Versiones especiales. 
+  \end{itemize}
+  \item Multiples personas trabajando de manera simultanea en la misma base de
+  c\'odigo. 
+\end{itemize}
+\end{frame} 
+
+\begin{frame}
+\frametitle{El prop\'osito del SCM}
+Los productos de software son entidades evolutivas. Parten de una base, y existe
+un desarrollo incremental. 
+\begin{block}{SCM}
+El Prop\'osito del SCM es coordinar los diferentes actores dentro del desarrollo
+de un producto, a trav\'es de identificar art\'iculos de configuraci\'on,
+administrar y controlar cambios, y poder auditar estos cambios.
+\end{block}
+\end{frame}
+
+\subsection{?`Como?}
+\begin{frame}
+\frametitle{Actividades de SCM}
+Seg\'un Bruegger las actividades de SCM se pueden definir como: 
+\begin{itemize}
+  \item Identificaci\'on de art\'iculos de configuraci\'on
+  \item Administraci\'on de promociones
+  \item Administraci\'on de lanzamientos
+  \item Administraci\'on de ramas
+  \item Administraci\'on de variantes
+  \item Administraci\'on de cambios
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{SCM seg\'un IEEE1042}
+Seg\'un IEEE 1042 SCM se trata de: 
+\begin{description}
+\item[Identificaci\'on de art\'iculos de configuraci\'on] Los componentes del
+sistema se identifican y etiquetan de manera \'unica. 
+\item[Control de cambios] Cambios al sistema son controlados de manera que se
+asegura la consistencia del sistema, y que esta se alinea con las metas del
+sistema. 
+\item[Contabilizaci\'on de estado] El estado de cada elemento individual del
+sistema se almacena, de tal manera que es posible distinguir versiones de cada
+elemento en particular. 
+\item[Auditorias] Las versiones seleccionadas para ser liberadas son validadas
+para asegurar que esten completas, consistentes, y cumplan con la calidad
+requerida del producto.
+\end{description}
+\end{frame}
+\begin{frame}
+Algunos autores indican que la definici\'on de IEEE necesita tambi\'en:
+\begin{description}
+\item[Administraci\'on de construcci\'on o manufactura] Manejo de las
+herramientas para poder construir el sistema final. 
+\item[Administraci\'on de procesos] Administraci\'on de politicas y documentos
+relacionados con el proceso, as\'i como la distribuci\'on de informaci\'on con
+respecto al sistema. 
+\end{description}
+\end{frame}
+\subsection{?`Quien?}
+\begin{frame}
+Los roles en el SCM son: 
+\begin{description}
+\item[Administrador de configuraci\'on] El responsable de identificar y manejar
+los art\'iculos de configuraci\'on.
+\item[Miembros del consejo de control de cambios] Responsables de aprobar o
+rechazar requerimientos de cambio. 
+\item[Desarrolladores] Responsables de realizar los cambios a los art\'iculos de
+configuraci\'on
+\item[Auditores] Encargado de seleccionar los cambios para la liberaci\'on del
+producto. 
+\end{description}
+\end{frame}
+\subsection{T\'erminolog\'ia}
+\begin{frame}
+\frametitle{Art\'iculos de configuraci\'on}
+
+\begin{definicion}
+Un \alert{Art\'iculo de configuraci\'on} es un producto de trabajo que es
+tratado como una unidad. 
+\end{definicion}
+
+Ejemplos: 
+\begin{itemize}
+  \item El documento con requerimientos
+  \item C\'odigo fuente
+  \item Casos de uso
+  \item Herramientas de compilaci\'on
+  \item Diagramas de objetos y relaciones.
+  \item Casos de pruebas 
+  \item \ldots
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Art\'iculos de configuraci\'on agregados}
+Un art\'iculo de configuraci\'on es como definici\'on una unidad. Sin embargo,
+esta puede ser altamente compleja. 
+
+Algunos autores hacen una diferencia entre art\'iculos de configuraci\'on
+simples (por ejemplo, un archivo de c\'odigo fuente), y art\'iculos de
+configuraci\'on complejos, (por ejemplo un sistema operativo).
+
+A estos \'ultimos se les conoce como articulos de configuraci\'on conglomerado
+(aggregate).
+\end{frame}
+\begin{frame}
+\frametitle{Requerimiento de cambio}
+
+\begin{definicion}
+Un \alert{requerimiento de cambio} es un reporte formal que tiene el prop\'osito
+de pedir un cambio en la configuraci\'on del sistema. 
+\end{definicion}
+El sistema de administraci\'on de cambios da la gu\'ia de como debe ser un
+requerimiento de cambio. Por ejemplo, en un sistema militar americano, tiene que
+sujetarse al MIL Std 480. En un sistema de desarrollo informal puede limitarse a
+un mensaje instantaneo o a un correo. 
+\end{frame}
+
+\begin{frame}
+\frametitle{Versiones}
+
+\begin{definicion}
+Una \alert{versi\'on} es el identificador de estado de un art\'iculo de
+configuraci\'on. 
+\end{definicion}
+Al definir una versi\'on de un conglomerado, esta identifica las versiones
+individuales de todos sus componentes. 
+\end{frame}
+
+\begin{frame}
+\frametitle{Algunas versiones especiales}
+\begin{description}
+\item[Promoci\'on (promotion)] Una versi\'on que esta disponible internamente en
+la organizaci\'on
+\item[Lanzamiento (release)] Una versi\'on externa a la organizaci\'on
+\item[Punto de referencia (baseline)] Una versi\'on que fu\'e acordada como un
+la inicial por los participantes del proyecto.  
+\end{description}
+\end{frame}
+\section*{Sumario}
+
+\begin{frame}
+\frametitle<presentation>{Sumario}
+
+\begin{itemize}
+  \item Definici\'on de Administrac\'on de Configuraci\'on de Software.
+  \item Conceptos b\'asicos: 
+  \begin{itemize}
+    \item Art\'iculos de configuraci\'on
+    \item Versiones
+    \item Liberaci\'on
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Actividades de aprendizaje}
+	\begin{itemize}
+		\item Consulta la definici\'on de administraci\'on de la configuraci\'on de acuerdo a:
+			\begin{enumerate}
+				\item CMMi
+				\item ITIL
+				\item ISO 9001
+				\item IEEE std 828/1042
+			\end{enumerate}
+		\item Analiza las diferencias entre \'estas definiciones.
+	\end{itemize}
+\end{frame}

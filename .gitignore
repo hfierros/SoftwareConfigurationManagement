@@ -1,0 +1,13 @@
+# Latex output files, to be ignored by git. 
+*.log
+*.vrb
+*.aux
+*.nav
+*.snm
+*.toc
+*.out
+
+# Vim temporary files. 
+*.swp
+*~
+
