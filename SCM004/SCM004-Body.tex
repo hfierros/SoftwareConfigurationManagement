@@ -9,7 +9,6 @@
 \begin{frame}
 \frametitle{A cubrir hoy\ldots}
 \tableofcontents
-% You might wish to add the option [pausesections]
 \end{frame}
 
 \section{Herramientas de SCM}
@@ -112,6 +111,15 @@
 	En linux y macOS, los comandos est\'an disponibles a trav\'es del shell. 
 \end{frame}
 \begin{frame}
+	\frametitle{Configurac\'on de GIT}
+	Despu\'es de instalar GIT, es recomendable: 
+	\begin{itemize}
+	\item Configurar tu nombre. \texttt{git config -global user.name "Juan Paco Pedro Pablo de la Mar"}
+	\item Configurar tu correo. \texttt{git config -global user.mail "jppdlm@minombre.com"}
+	\end{itemize}
+	Estos datos se usar\'an cuando hagas promociones de c\'odigo. 
+\end{frame}
+\begin{frame}
 	\frametitle{Creando el baseline de manera local}
 	Para crear el baseline:
 	\begin{itemize}
@@ -122,6 +130,7 @@
 		\item Escribe el comando \texttt{git commit}. Esto promueve los archivos del baseline en el repositorio. 
 		\item El \texttt{git commit} lanza una ventana de vim, donde escribiras la raz\'on del commit.  
 	\end{itemize}
+	Y nuestro baseline esta creado. 
 \end{frame}
 \begin{frame}
 	\frametitle{Entendiendo el repositorio}
@@ -186,6 +195,16 @@
 			\end{itemize}
 		\item El comando \texttt{git clone} clona un repositorio remoto a un directorio.
 		\item Los comandos \texttt{git pull} y \texttt{git push} "bajan" y "suben" los cambios al remoto.
+		\item El comando \texttt{git remote} da informaci\'on sobre los remotos. 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{GitHub}
+	\begin{itemize}
+	\item GitHub es una plataforma de desarrollo colaborativo basada en git. 
+	\item Permite el manejo de proyectos p\'ublicos con algo de funcionalidad de redes sociales. 
+	\item Permite la creaci\'on de un Wiki por cada proyecto. 
+	\item Para usuarios de paga, permite creaci\'on de proyectos privados. 
 	\end{itemize}
 \end{frame}
 
