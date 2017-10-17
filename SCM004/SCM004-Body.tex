@@ -1,0 +1,205 @@
+
+\theoremstyle{definition}
+\newtheorem{definicion}{Definici\'on}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{A cubrir hoy\ldots}
+\tableofcontents
+% You might wish to add the option [pausesections]
+\end{frame}
+
+\section{Herramientas de SCM}
+\subsection{Tipos de las herramientas de software}
+\begin{frame}
+	\frametitle{Prop\'osito de las herramientas}
+	El plan definir\'a las herramientas que se usar\'an.
+	
+	Es posible llevar el proceso "a mano" siempre y cuando se defina un 
+	mecanismo de manejo de versiones. (Por ejemplo, incluyendo la versi\'on
+	en el nombre del archivo, usando banderas de cambio en el c\'odigo, etc)
+
+	Sin embargo existen herramientas de software que facilitan esta tarea
+\end{frame}
+\begin{frame}
+	\frametitle{Las funciones de el SW SCM}
+	Una herramienta de SCM debe:
+	\begin{itemize}
+		\item Manejar la identificaci\'on de los AC y sus versiones.
+		\item Facilitar la colaboraci\'on entre los desarrolladores.
+	\end{itemize}
+	Una herramienta de SCM puede verse como una BD. 
+\end{frame}
+\begin{frame}
+	\frametitle{Controladas localmente}
+	Los art\'iculos de configuraci\'on y los deltas estan almacenados de 
+	manera local en el sistema. 
+
+	Los desarrolladores tienen que conectarse a este sistema, y 
+	trabajar ah\'i.
+
+	Ejemplos: 
+	\begin{itemize}
+		\item RCS
+		\item SCCS
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Cliente/Servidor}
+	Los art\'iculos de configuraci\'on son almacenados en un servidor 
+	y los desarrolladores se conectan a trav\'es de un cliente. 
+	Los cambios son coordinados por el software servidor. 
+	
+	Ejemplos: 
+	\begin{itemize}
+		\item CVS
+		\item Subversion
+		\item Accurev
+		\item ClearCase
+		\item Perforce
+		\item VSS
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Modelo distribuido}
+	Cada desarrollador trabaja en su propio repositorio local, y los 
+	cambios y modificaciones son compartidos en pasos separados. 
+
+	Ejemplos:
+	\begin{itemize}
+		\item Mercurial
+		\item git
+		\item arch
+		\item Fossil
+		\item VS Team Service
+		\item TeamWare
+	\end{itemize}
+\end{frame}
+\section{git}
+\begin{frame}
+	\frametitle{git}
+	Git fu\'e desarrollado a f\'in de sustituir BitKeeper.
+	Sus objetivos son:
+	\begin{itemize}
+		\item Velocidad
+		\item Simplicidad
+		\item Desarrollo no lineal
+		\item Distribuido
+		\item Manejo de proyectos grandes.
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Usando git en un SCM}
+	Preparando un ejemplo muy sencillo: 
+	\begin{itemize}
+		\item Creamos un programa muy sencillo en C (hello world?)
+		\item Crea un archivo de readme.txt 
+		\item Crea un subdirectorio, donde pondras otro archivo de texto mas, llamado doc.txt. 
+	\end{itemize}
+	Estos tres archivos representan nuestros art\'iculos de configuraci\'on. 
+\end{frame}
+\begin{frame}
+	\frametitle{Iniciando el baseline}
+	Al instalar git, en windows se instalan tres comandos en el men\'u:
+	\begin{description}
+		\item [git-bash] Es un shell tipo bash de unix, con varios comandos de unix disponibles. 
+		\item [git-cmd] Es un shell tipo CMD de windows, donde el path incluye los ejecutables de git. 
+		\item [git-gui] Un interface gr\'afico para ver el trabajo con git. 
+	\end{description}
+	En linux y macOS, los comandos est\'an disponibles a trav\'es del shell. 
+\end{frame}
+\begin{frame}
+	\frametitle{Creando el baseline de manera local}
+	Para crear el baseline:
+	\begin{itemize}
+		\item En git-bash cambiate al directorio donde estan tus archivos. 
+		\item Escribe el comando \texttt{git init}. Esto crea un repositorio local vacio de git.
+		\item Usa el comando \texttt{git status} entre comandos. 
+		\item Escribe el comando \texttt{git add .} Esto a\~nade todos nuestros archivos al repositorio de git.
+		\item Escribe el comando \texttt{git commit}. Esto promueve los archivos del baseline en el repositorio. 
+		\item El \texttt{git commit} lanza una ventana de vim, donde escribiras la raz\'on del commit.  
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Entendiendo el repositorio}
+	\begin{itemize}
+		\item El comando \texttt{git ls-tree -r HEAD} da un listado de los archivos.
+		\item El comando \texttt{git log} da una historia del sistema. 
+		\item La meta-informaci\'on sobre el repositorio se almacena en el directorio \texttt{.git}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Haciendo cambios: Nuevos archivos}
+	\begin{itemize}
+		\item Crea un nuevo archivo (test.txt) en el arbol. 
+		\item Usa el comando \texttt{git status}. Muestra los cambios en el arbol. 
+		\item Usa el comando \texttt{git add test.txt}. Pasa la parte al control de git. 
+		\item Usa el comando \texttt{git status}. Muestra las partes listas para promover. 
+		\item Usa el comando \texttt{git commit}. Hace la promoci\'on. 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Haciendo cambios: Modificando archivos}
+	\begin{itemize}
+		\item Modifica uno de los archivos en el arbol. 
+		\item Usa el comando \texttt{git status}: Muestra los cambios en el arbol.
+		\item Usa el comando \texttt{git add -A}: Pasa los cambios al control de git. 
+		\item Usa el comando \texttt{git status}: Muestra las partes listas para promover.
+		\item Usa el comando \texttt{git commit}: Hace la promoci\'on.
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Checando la historia}
+	\begin{itemize}
+		\item El comando \texttt{git log} da un hist\'orico de los cambios
+		\item El comando \texttt{git show} da un vistazo de los cambios en cada commit
+		\item El comando \texttt{git diff} saca las diferencias en los archivos antes de hacer commit. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Branches}
+	\begin{itemize}
+		\item Cada commit cambia el estado del repositorio.
+		\item Un branch es un apuntador a uno de los diferentes estados. 
+		\item Hay una rama principal llamada \emph{master}
+		\item El comando \texttt{git branch} sin parametros, lista las branches.
+		\item El comando \texttt{git branch nuevarama}, crea un nuevo branch, llamado nuevarama.
+		\item El comando \texttt{git checkout nuevarama} hace que el nuevo branch sea el que recibe los commits. 
+		\item El comando \texttt{git merge} Une diferentes branches. 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Remotos}
+	La parte mas poderosa del git es la capacidad de manejar datos distribuidos. \
+	\begin{itemize}
+		\item Un repositorio "local" en un servidor de archivos. 
+		\item Un repositorio remoto, a trav\'es de:
+			\begin{itemize}
+				\item ssh
+				\item ftp
+				\item http
+				\item git
+			\end{itemize}
+		\item El comando \texttt{git clone} clona un repositorio remoto a un directorio.
+		\item Los comandos \texttt{git pull} y \texttt{git push} "bajan" y "suben" los cambios al remoto.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Actividad de aprendizaje}
+	\begin{itemize}
+		\item{Usando git identifica\ldots}
+			\begin{itemize}
+				\item \ldots como instalar 
+				\item \ldots que comando usar para crear un baseline
+				\item \ldots que comando(s) usar para hacer una promoci\'on
+				\item \ldots que comandos usar para hacer un branch
+			\end{itemize}
+		\item{repite usando mercurial, subversion y/o otro sistema de control de versi\'on}
+	\end{itemize}
+\end{frame}
+

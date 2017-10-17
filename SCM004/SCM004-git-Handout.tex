@@ -1,0 +1,101 @@
+
+\documentclass[handout]{beamer}
+
+
+\mode<handout>
+{
+\usetheme{Marburg}
+\usecolortheme{crane}
+\setbeamercovered{transparent}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+
+\pgfpagesdeclarelayout{4 on 1 boxed}
+{
+\edef\pgfpageoptionheight{\the\paperheight} 
+\edef\pgfpageoptionwidth{\the\paperwidth}
+\edef\pgfpageoptionborder{0pt}
+}
+{
+\pgfpagesphysicalpageoptions
+{%
+  logical pages=4,%
+  physical height=\pgfpageoptionheight,%
+  physical width=\pgfpageoptionwidth%
+}
+\pgfpageslogicalpageoptions{1}
+{%
+  border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+  border shrink=\pgfpageoptionborder,%
+  resized width=.5\pgfphysicalwidth,%
+  resized height=.5\pgfphysicalheight,%
+  center=\pgfpoint{.25\pgfphysicalwidth}{.75\pgfphysicalheight}%
+}%
+\pgfpageslogicalpageoptions{2}
+{%
+  border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+  border shrink=\pgfpageoptionborder,%
+  resized width=.5\pgfphysicalwidth,%
+  resized height=.5\pgfphysicalheight,%
+  center=\pgfpoint{.75\pgfphysicalwidth}{.75\pgfphysicalheight}%
+}%
+\pgfpageslogicalpageoptions{3}
+{%
+  border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+  border shrink=\pgfpageoptionborder,%
+  resized width=.5\pgfphysicalwidth,%
+  resized height=.5\pgfphysicalheight,%
+  center=\pgfpoint{.25\pgfphysicalwidth}{.25\pgfphysicalheight}%
+}%
+\pgfpageslogicalpageoptions{4}
+{%
+  border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+  border shrink=\pgfpageoptionborder,%
+  resized width=.5\pgfphysicalwidth,%
+  resized height=.5\pgfphysicalheight,%
+  center=\pgfpoint{.75\pgfphysicalwidth}{.25\pgfphysicalheight}%
+}%
+}
+
+\pgfpagesuselayout{4 on 1 boxed}[a4paper, border shrink=5mm, landscape]
+\nofiles
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{graphicx}
+
+\usepackage[T1]{fontenc}
+
+\title{Administraci\'on de la configuraci\'on de Software}
+\subtitle{Cuarta sesi\'on: Herramientas de SCM}
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{univa.png}
+\logo{\pgfuseimage{university-logo}}
+
+\titlegraphic{\includegraphics[height=1.5cm]{univa.png}}
+
+
+\author{H\'ector Jos\'e Fierros L\'opez }
+
+\date{Mayo 2017}
+
+\subject{Talks}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\frametitle{?`Donde estamos?}
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+
+
+\begin{document}
+\input{SCM004-Body}
+\end{document}

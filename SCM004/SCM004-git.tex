@@ -1,0 +1,48 @@
+
+\documentclass{beamer}
+
+
+\mode<presentation>
+{
+\usetheme{Marburg}
+\usecolortheme{crane}
+\setbeamercovered{transparent}
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{graphicx}
+
+\usepackage[T1]{fontenc}
+
+\title{Administraci\'on de la configuraci\'on de Software}
+\subtitle{Cuarta sesi\'on: Herramientas de SCM}
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{univa.png}
+\logo{\pgfuseimage{university-logo}}
+
+\titlegraphic{\includegraphics[height=1.5cm]{univa.png}}
+
+
+\author{H\'ector Jos\'e Fierros L\'opez }
+
+\date{Mayo 2017}
+
+\subject{Talks}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>
+\frametitle{?`Donde estamos?}
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+
+
+\begin{document}
+\input{SCM004-Body}
+\end{document}
