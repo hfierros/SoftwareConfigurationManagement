@@ -1,0 +1,206 @@
+\theoremstyle{definition}
+\newtheorem{definicion}{Definici\'on}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{A cubrir hoy\ldots}
+\tableofcontents
+% You might wish to add the option [pausesections]
+\end{frame}
+
+\section{IEEE-828}
+\subsection{El standard IEEE-828}
+\begin{frame}
+	\frametitle{?`Cual es el contenido de un plan de administraci\'on de configurac\'on?}
+	Seg\'un el standard IEEE-828: 
+	\begin{enumerate}
+		\item Introducci\'on
+		\item Administraci\'on de SCM
+		\item Actividades de SCM
+		\item Programa de SCM
+		\item Recursos de SCM
+		\item Mantenimiento del plan. 
+	\end{enumerate}
+\end{frame}
+\subsection{Introducci\'on}
+\begin{frame}
+	\frametitle{Secci\'on 1: Introducci\'on}
+	Provee un sumario de las actividades de SCM, a f\'in de dar una 
+	visi\'on general del plan. 
+
+	Debe incluir cuatro temas:
+	\begin{itemize}
+		\item Prop\'osito del plan
+		\item Alcance del plan. 
+		\item Definici\'on de t\'erminos
+		\item Referencias. 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Ejemplo...}
+	Introducci\'on
+
+	El prop\'osito de este documento es comunicar el plan de administraci\'on de configuraci\'on 
+	de software del proyecto "App para dominar al mundo" de los laboratorios ACME. 
+	Este documento es una herramienta, que ser\'a tratada como un documento vivo, que se 
+	evolucionar\'a durante las fases de desarrollo del proyecto. 
+\ldots
+
+\end{frame}
+
+\subsection{Administraci\'on de SCM}
+\begin{frame}
+	\frametitle{Administraci\'on de SCM
+	}
+	Esta secci\'on contesta a la pregunta ?`Quien? 
+
+	Consta de las siguientes partes:
+	\begin{itemize}
+		\item Organizaci\'on del proyecto
+		\item Responsabilidades
+		\item Referencias
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Administraci\'on del SCM: Organizaci\'on}
+	El plan debe identificar:
+	\begin{enumerate}
+		\item Las unidades organizacionales que participan o son
+			responsables de cualquier actividad de SCM.
+		\item Los roles de estos miembros
+		\item Las relaciones entre estos miembros
+	\end{enumerate}
+
+	Los miembros pueden ser proveedores, clientes, grupos, o individuos en
+	la organizaci\'on
+\end{frame}
+\begin{frame}
+	\frametitle{Administraci\'on del SCM: Responsabilidades}
+	Describe una relaci\'on entre las actividades de la siguiente secci\'on y 
+	y las unidades organizacionales de la secci\'on anterior. 
+
+	Para los consejos y grupos de trabajo que se forman debe describir: 
+	\begin{enumerate}
+		\item Prop\'osito y objetivos. 
+		\item Membres\'ia y afiliaci\'on
+		\item Periodo de efectividad
+		\item Alcance de autoridad
+		\item Procedimientos operacionales
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{Administraci\'on del SCM: Referencias}
+En esta secci\'on se describen las relaciones del plan con otras pol\'iticas, directivas y
+procedimientos que afecten o limiten el plan. 
+\end{frame}
+\subsection{Actividades de SCM}
+\begin{frame}
+	\frametitle{Actividades de SCM}
+Esta secci\'on documenta las actividades de SCM:
+	\begin{enumerate}
+		\item Identificaci\'on de la configurac\'on.
+		\item Control de la configuraci\'on
+		\item Estado de la configuraci\'on y reporteo
+		\item Revisiones de la configuraci\'on. 
+		\item Control de interfaces
+		\item Control de proveedores. 
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{Identificaci\'on de la configuraci\'on}
+	\begin{description}
+		\item [Identificaci\'on de art\'iculos de la configurac\'on] 
+			El plan registra los art\'iculos de configuraci\'on (AC) del 
+			proyecto, sus definiciones, y c\'omo se mantendran por 
+			el proyecto. Adem\'as define las lineas base en el ciclo
+			de vida del proyecto. 
+		\item [Nombrando los art\'iculos de configuraci\'on.] 
+			El plan decribe los m\'etodos para nombrar los AC e 
+			identificarlos. 
+	\end{description}
+\end{frame}
+\begin{frame}
+	\frametitle{Control de la configurac\'on}
+	El plan describe como cambiar los AC en la l\'inea base.
+	\begin{enumerate}
+		\item Identificaci\'on y documentaci\'on de la necesidad del cambio.
+		\item An\'alisis y evaluaci\'on de un requerimiento de cambio
+		\item Aprobar o desaprobar el requerimiento
+		\item Verificaci\'on, imlementaci\'on y liberaci\'on del cambio
+	\end{enumerate}
+	El plan identificar\'a los registros que se usan para documentar estos pasos. 
+\end{frame}
+\begin{frame}
+	\frametitle{Auditorias y revisiones de la configuraci\'on}
+	El plan identifica que revisiones y validaciones se haran en el 
+	proyecto. 
+	Para cada auditoria el plan define: 
+	\begin{enumerate}
+		\item Su objetivo.
+		\item Los AC que seran auditado/revisado
+		\item El periodo de las tareas de auditor\'ia o revisi\'on.
+		\item Los procedimientos para conducir la auditor\'ia/revisi\'on
+		\item Los participantes
+		\item Documentaciones requeridas para las auditorias. 
+		\item Los procedimientos para dar seguimiento a problemas. 
+		\item El criterio de aprobaci\'on de la auditor\'ia. 
+	\end{enumerate}
+\end{frame}
+\subsection{Programa de SCM}
+\begin{frame}
+	\frametitle{Programa de SCM}
+	El plan describe:
+	\begin{itemize}
+		\item la secuencia y dependencias entre las actividades de SCM
+		\item la relaci\'on entre las actividades de SCM y los momentos
+			clave o eventos del proyecto. 
+		\item los momentos clave y la linea base que establescera
+		\item las fechas de arranque y terminac\'on de las actividades
+			de auditor\'ia y revisi\'on. 
+	\end{itemize}
+	Todos los momentos ser\'an expresados en fechas absolutas. 
+\end{frame}
+\subsection{Recursos de SCM}
+\begin{frame}
+	\frametitle{Recursos de SCM}
+	Documenta las herramientas, t\'ecmocas equipo, personal y entrenamiento
+	necesario para las atividades de SCM
+\end{frame}
+\subsection{Mantenimiento del plan}
+\begin{frame}
+	\frametitle{Mantenimiento del plan}
+	Identifica:
+	\begin{itemize}
+		\item El responsable del monitoreo del plan
+		\item La frecuencia de las actualizaciones del plan
+		\item C\'omo se evaluan y aprueban cambios al plan
+		\item C\'omo se comunican los cambios al plan. 
+	\end{itemize}
+\end{frame}
+\section{sumario}
+\begin{frame}
+	\frametitle{Sumario}
+    \begin{itemize}
+	    \item El standard IEEE 828 define las secciones necesarias 
+		    para un plan de configuraci\'on de software.
+	    \item Este standard cumple con criterios necesarios definidos en 
+		    otros standares: ISO9001, CMMi, ITIL
+    \end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Actividades de aprendizaje}
+	Escoge \alert{una} de las actividades siguientes:
+	\begin{itemize}
+		\item Si existe en tu organizaci\'on o proyecto, estudia el
+			plan de SCM, e identifica si corresponde a las 
+			secciones descritas en IEEE828. 
+		\item Compara las actividades descritas en CMMi para SCM con
+			las descritas en IEEE828. 
+		\item Compara las actividades descritas en ITIL para SCM con 
+			las descritas en IEEE828. 
+	\end{itemize}
+\end{frame}
+
